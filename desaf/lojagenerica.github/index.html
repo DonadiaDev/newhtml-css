@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <title>DICRIA Company®</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICRIA COMPANY 1º LANÇAMENTO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 40px;
+            background-color: #eaeaea;
+        }
+
+        .banner-wrapper {
+            display: flex;
+            position: relative;
+            height: 500px; /* Ajuste a altura conforme necessário */
+        }
+
+        .banner-wrapper img {
+            width: 100%; /* Largura total da tela */
+            height: 100%; /* Altura igual à altura do contêiner */
+            object-fit: cover; /* Ajusta a imagem para preencher o contêiner */
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 200px; /* Ajuste a largura dos produtos conforme necessário */
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-info {
+            padding: 10px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .product-price {
+            color: #e74c3c;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logodicria2.png.png" alt="Logo" class="logo">
+    </header>
+
+    <div class="banner-container">
+        <div class="banner-wrapper" id="bannerWrapper">
+            <img src="40.png" alt="40">
+            <img src="dicriagg.png.png" alt="dicriagg">
+            <img src="promoção.png" alt="promoção">
+            <!-- Adicione mais banners conforme necessário -->
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="products">
+            <div class="product">
+                <img src="camisadicriaazul.png.png" alt="Produto 1">
+                <div class="product-info">
+                    <p class="product-title">T-SHIRT ICE BLUE</p>
+                    <p class="product-price">R$ 199,99</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="camisadicriapreta.png.png" alt="Produto 2">
+                <div class="product-info">
+                    <p class="product-title">T-SHIRT BLACK</p>
+                    <p class="product-price">R$ 199,99</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="camisadicriavinho.png.png" alt="Produto 3">
+                <div class="product-info">
+                    <p class="product-title">T-SHIRT WINE RAT</p>
+                    <p class="product-price">R$ 199,99</p>
+                </div>
+            </div>
+            <!-- Adicione mais produtos conforme necessário -->
+        </div>
+    </div>
+
+    <script>
+        const bannerWrapper = document.getElementById('bannerWrapper');
+        let offset = 0;
+
+        function moveBanner() {
+            const bannerWidth = bannerWrapper.scrollWidth;
+            offset -= 1; // Ajuste a velocidade da rotação
+            if (Math.abs(offset) > bannerWidth) {
+                offset = 0;
+            }
+            bannerWrapper.style.transform = `translateX(${offset}px)`;
+        }
+
+        setInterval(moveBanner, 20); // Ajuste o intervalo para a velocidade do movimento
+    </script>
+
+</html>
