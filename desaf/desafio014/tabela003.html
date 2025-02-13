@@ -24,8 +24,9 @@
             padding: 10px;
             text-align: center;
         }
-        .media{
-          text-align: center;
+        .cor{
+            color: black;
+            background-color: grey;
         }
     </style>
 </head>
@@ -34,16 +35,18 @@
         <caption>
             BOLETIM ESCOLAR
         </caption>
-        <thead>
-            <tr>
-                <th>Área</th>
-                <th>Disciplinas</th>
-                <th rowspan="3" colspan="4">Notas</th>
-                <th colspan="4">Notas 1</th>
-                <th>Notas 2</th>
-                <th colspan="4">Média</th>
-            </tr>
-        </thead>
+                <thead>
+                    <tr>
+                        <th class="cor" rowspan="2" scope="row">Área</th>
+                        <th class="cor" rowspan="2" scope="row">Disciplinas</th>
+                        <th class="cor" colspan="2" scope="colgroup">Notas</th>
+                        <th class="cor" rowspan="2" scope="row">Média</th>
+                    </tr>
+                    <tr>
+                        <th class="cor" scope="col">Nota 1</th>
+                        <th class="cor" scope="col">Nota 2</th>
+                    </tr>
+                </thead>
         <tbody>
             <tbody>
                 <tr>
@@ -72,8 +75,8 @@
                     <td>0.00</td>
                 </tr>
                 <tr>
-                    <th colspan="4" id="media">Média de Exatas</th>
-                    <td>0.00</td>
+                    <th colspan="4" class="cor" style="text-align: left;">Média de Exatas</th>
+                    <td class="cor">0.00</td>
                 </tr>
                 <tr>
                     <th rowspan="2" scope="rowgroup">Humanas</th>
@@ -90,8 +93,8 @@
                     <td>0.00</td>
                 </tr>
                 <tr>
-                    <th colspan="4" id="media">Média de Humanas</th>
-                    <td>0.00</td>
+                    <th colspan="4" class="cor" style="text-align: left;">Média de Humanas</th>
+                    <td class="cor">0.00</td>
                 </tr>
         </tbody>
     </table>
